@@ -17,6 +17,7 @@ body{background-color:var(--paper);background-image:url('assets/paper.svg')}
 @media(max-width:360px){.masthead{margin:0 20px}.wordmark{font-size:11px;gap:8px}.masthead nav{gap:16px;font-size:10px}.hero{padding-left:20px;padding-right:20px}.hero h1{font-size:24.5vw}.chinese-name{font-size:25px}.discipline{font-size:9px}.hero-art{margin-left:-20px;margin-right:-20px;width:calc(100% + 40px)}.hero-art figcaption{margin-left:20px;margin-right:20px}.hero-collection-link{font-size:19px}}
 /* Transparent exhibition assets sit directly on the continuous paper canvas. */
 body{background-image:linear-gradient(#fff9ee60,#fff9ee60),url('assets/rice-paper.png');background-size:auto,780px 780px}
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:hidden}
 .artist-seal{background-image:url('assets/artist-calligraphy.png');background-size:90px 180px;background-position:center bottom;mix-blend-mode:multiply;filter:none;width:24px;height:36px}
 .chinese-name{width:70px;height:230px;flex:none;padding:0;margin-top:5px;writing-mode:horizontal-tb;background-image:url('assets/artist-calligraphy.png');background-size:115px 230px;background-position:center;background-repeat:no-repeat}
 .chinese-name:before{height:80px;left:-3px;bottom:50px}.hero-art{mix-blend-mode:normal;max-width:680px;margin-right:-7vw}.hero-art img{filter:none;mix-blend-mode:normal;width:100%;height:auto}.hero-art figcaption{margin-left:20px}.hero-art figcaption:before{bottom:35px}.hero-collection-link{padding-top:26px}.works{background-image:none}
