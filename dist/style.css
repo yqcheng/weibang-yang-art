@@ -30,4 +30,10 @@ body{background-image:linear-gradient(#fff9ee60,#fff9ee60),url('assets/rice-pape
 .chinese-name:after{content:'';position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:33px;height:33px;background:url('assets/yang-seal.png') center / 145% 145% no-repeat;mix-blend-mode:multiply}
 @media(max-width:650px){.wordmark .artist-seal{width:22px;height:22px;background-size:145% 145%;background-position:center}.chinese-name:before{inset:0;width:100%;height:100%;background-size:78px 156px;clip-path:inset(0 0 23% 0)}.chinese-name:after{width:24px;height:24px;bottom:1px}}
 @media(max-width:360px){.chinese-name:before{background-size:72px 144px}.chinese-name:after{width:22px;height:22px}}
+/* Reserve separate columns for both names; keep the divider inside their gap. */
+.hero-name{display:grid;grid-template-columns:minmax(0,1fr) 70px;gap:32px;align-items:start;position:relative;container-type:inline-size}
+.hero .hero-name h1{font-size:calc((100cqw - 102px)/3.3);min-width:0;line-height:.85;letter-spacing:-.065em}
+.hero-name:after{content:'';position:absolute;right:86px;top:28%;height:48%;width:1px;background:var(--red);pointer-events:none}
+@media(max-width:650px){.hero-name{grid-template-columns:minmax(0,1fr) 48px;gap:24px}.hero .hero-name h1{font-size:calc((100cqw - 72px)/3.3)}.hero-name:after{right:60px;top:28%;height:48%}.chinese-name{margin-top:0}.discipline{margin-top:30px}}
+@media(max-width:360px){.hero-name{grid-template-columns:minmax(0,1fr) 42px;gap:22px}.hero .hero-name h1{font-size:calc((100cqw - 64px)/3.3)}.hero-name:after{right:53px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
