@@ -36,4 +36,13 @@ body{background-image:linear-gradient(#fff9ee60,#fff9ee60),url('assets/rice-pape
 .hero-name:after{content:'';position:absolute;right:86px;top:28%;height:48%;width:1px;background:var(--red);pointer-events:none}
 @media(max-width:650px){.hero-name{grid-template-columns:minmax(0,1fr) 48px;gap:24px}.hero .hero-name h1{font-size:calc((100cqw - 72px)/3.3)}.hero-name:after{right:60px;top:28%;height:48%}.chinese-name{margin-top:0}.discipline{margin-top:30px}}
 @media(max-width:360px){.hero-name{grid-template-columns:minmax(0,1fr) 42px;gap:22px}.hero .hero-name h1{font-size:calc((100cqw - 64px)/3.3)}.hero-name:after{right:53px}}
+/* Align each row independently of image proportions and caption lengths. */
+.art-card{display:grid;grid-template-rows:360px auto auto;align-content:start;align-self:stretch}
+.art-stage{height:100%;align-items:flex-end}
+.art-stage img{object-position:center bottom}
+.art-label{min-height:84px;align-items:flex-start}
+@media(min-width:1600px){.art-card{grid-template-rows:450px auto auto}}
+@media(max-width:1000px){.art-card{grid-template-rows:280px auto auto}}
+@media(max-width:650px){.art-card{grid-template-rows:220px auto;align-content:start}.art-label{min-height:114px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}.art-label>span{margin:0;padding:0}.art-label h3{margin:0}.art-stage{height:220px}}
+@media(max-width:360px){.art-card{grid-template-rows:180px auto}.art-stage{height:180px}.art-label{min-height:124px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
